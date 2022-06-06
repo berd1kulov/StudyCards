@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  StudyCards
+
+  Created by Bakdaulet Berdikul on 06.06.2022.
+  
+*/
+
+//Authorization
+"email" = "Email";
+"password" = "Password";
+"forgot_password" = "Forgot Password?";
+"sign_in" = "Sign In";
+
+"profile" = "Profile";

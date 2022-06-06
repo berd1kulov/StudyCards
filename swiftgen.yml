@@ -1,0 +1,11 @@
+strings:
+    inputs: StudyCards/Resources/Strings/en.lproj/Localizable.strings
+    outputs:
+    - templateName: structured-swift5
+      output: StudyCards/Resources/Strings/Localizable.swift
+      
+xcassets:
+  inputs: StudyCards/Resources/Assets/Assets.xcassets
+  outputs:
+    - templateName: swift5
+      output: StudyCards/Resources/Assets/Assets.swift
