@@ -25,7 +25,10 @@ class LoginController: BaseVC {
         signInButton.addTarget(self, action: #selector(signInTapped), for: .touchUpInside)
         
         configureUI()
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        scrollView.contentSize = CGSize(width: UIScreen.main.bounds.width, height: 400)
     }
     
     @objc private func signInTapped(){
@@ -75,8 +78,5 @@ class LoginController: BaseVC {
             $0.height.equalTo(58)
             $0.centerX.equalToSuperview()
         }
-        
-        
     }
-
 }

@@ -10,16 +10,28 @@ import Foundation
 // swiftlint:disable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:disable nesting type_body_length type_name vertical_whitespace_opening_braces
 internal enum L10n {
+  /// Application Language
+  internal static let applicationLanguage = L10n.tr("Localizable", "application_language")
+  /// Buy Words
+  internal static let buyWords = L10n.tr("Localizable", "buy_words")
   /// Email
   internal static let email = L10n.tr("Localizable", "email")
+  /// Folder
+  internal static let folder = L10n.tr("Localizable", "folder")
   /// Forgot Password?
   internal static let forgotPassword = L10n.tr("Localizable", "forgot_password")
   /// Password
   internal static let password = L10n.tr("Localizable", "password")
   /// Profile
   internal static let profile = L10n.tr("Localizable", "profile")
+  /// Reset Password
+  internal static let resetPassword = L10n.tr("Localizable", "reset_password")
   /// Sign In
   internal static let signIn = L10n.tr("Localizable", "sign_in")
+  /// Sign Out
+  internal static let signOut = L10n.tr("Localizable", "sign_out")
+  /// Word
+  internal static let word = L10n.tr("Localizable", "word")
 }
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length
 // swiftlint:enable nesting type_body_length type_name vertical_whitespace_opening_braces

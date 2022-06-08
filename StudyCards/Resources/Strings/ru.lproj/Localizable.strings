@@ -11,4 +11,13 @@
 "forgot_password" = "Забыли Пароль?";
 "sign_in" = "Вход";
 
+//Home
+"word" = "Слова";
+"folder" = "Папка";
+
+//Profile
+"buy_words" = "Купить слова";
+"reset_password" = "Изменить пароль";
+"application_language" = "Язык приложения";
+"sign_out" = "Выйти";
 "profile" = "Профиль";
