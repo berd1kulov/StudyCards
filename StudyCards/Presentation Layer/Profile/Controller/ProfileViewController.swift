@@ -10,6 +10,10 @@ import SnapKit
 
 class ProfileViewController: BaseVC {
     
+    weak var coordinator: ProfileCoordinator?
+    
+    var didSendEventClosure: ((ProfileViewController.Event) -> Void)?
+    
     private var factory = ProfileFactory()
     
     private var viewModel = ProfileViewModel()
@@ -54,11 +58,19 @@ extension ProfileViewController {
                 case .buyWords: break
                 case .resetPassword: break
                 case .appLanguage: break
-                case .signOut: self.dismiss(animated: true)
+                case .signOut:
+                    self.dismiss(animated: true)
+//                    self.didSendEventClosure?(.logout)
                 case .none:
                     break
                 }
             }
+    }
+}
+
+extension ProfileViewController {
+    enum Event {
+        case logout
     }
 }
 

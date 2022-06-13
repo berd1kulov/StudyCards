@@ -9,6 +9,8 @@ import UIKit
 
 class CardsViewController: BaseVC {
     
+    weak var coordinator: CardsCoordinator?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground

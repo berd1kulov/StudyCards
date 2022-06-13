@@ -10,6 +10,8 @@ import SnapKit
 
 class HomeViewController: BaseVC {
     
+    weak var coordinator: HomeCoordinator?
+    
     private var factory = HomeFactory()
 
     private lazy var topNavBarView = factory.topNavBarView

@@ -8,6 +8,8 @@
 import UIKit
 
 class ExploreViewController: BaseVC {
+    
+    weak var coordinator: ExploreCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()

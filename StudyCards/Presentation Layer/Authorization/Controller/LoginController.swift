@@ -10,6 +10,8 @@ import SnapKit
 
 class LoginController: BaseVC {
     
+    var didSendEventClosure: ((LoginController.Event) -> Void)?
+    
     private var factory = AuthFactory()
     
     private lazy var scrollView = factory.scrollView
@@ -78,5 +80,11 @@ class LoginController: BaseVC {
             $0.height.equalTo(58)
             $0.centerX.equalToSuperview()
         }
+    }
+}
+
+extension LoginController {
+    enum Event {
+        case login
     }
 }
