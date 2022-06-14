@@ -28,7 +28,7 @@ class ExploreCoordinator: NSObject, Coordinator{
         navigationController.pushViewController(exploreVC, animated: false)
     }
     
-    func finish() {
-        navigationController.popViewController(animated: true)
-    }
+//    func finish() {
+//        navigationController.popViewController(animated: true)
+//    }
 }

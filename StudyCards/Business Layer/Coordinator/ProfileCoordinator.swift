@@ -33,8 +33,4 @@ class ProfileCoordinator: NSObject, Coordinator{
         profileVC.coordinator = self
         navigationController.pushViewController(profileVC, animated: false)
     }
-    
-    func finish() {
-        navigationController.popViewController(animated: true)
-    }
 }

@@ -35,9 +35,7 @@ class LoginController: BaseVC {
     
     @objc private func signInTapped(){
         signInButton.transformScale()
-        let vc = TabBarViewController()
-        vc.modalPresentationStyle = .fullScreen
-        present(vc, animated: true)
+        didSendEventClosure?(.login)
     }
     
     private func configureUI(){

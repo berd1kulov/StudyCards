@@ -31,7 +31,6 @@ class TabCoordinator: NSObject, Coordinator {
     required init(_ navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.tabBarController = .init()
-//        tabBarController.tabBar.backgroundColor = .systemBackground
     }
 
     func start() {
@@ -45,19 +44,25 @@ class TabCoordinator: NSObject, Coordinator {
         prepareTabBarController(withTabControllers: controllers)
     }
     
+    
     deinit {
-        print("TabCoordinator deinit")
+        print("Deinit \(String(describing: self))")
     }
     
     private func prepareTabBarController(withTabControllers tabControllers: [UIViewController]) {
         /// Set delegate for UITabBarController
         tabBarController.delegate = self
         /// Assign page's controllers
-        tabBarController.setViewControllers(tabControllers, animated: true)
+        tabBarController.setViewControllers(tabControllers, animated: false)
         /// Let set index
         tabBarController.selectedIndex = TabBarPage.home.pageOrderNumber()
         /// Styling
         tabBarController.tabBar.isTranslucent = false
+        tabBarController.tabBar.backgroundColor = .systemBackground
+        tabBarController.tabBar.layer.shadowOffset = CGSize(width: 0, height: 0)
+        tabBarController.tabBar.layer.shadowRadius = 4
+        tabBarController.tabBar.layer.shadowColor = Asset.mainLightGray.color.cgColor
+        tabBarController.tabBar.layer.shadowOpacity = 0.3
         
         /// In this step, we attach tabBarController to navigation controller associated with this coordanator
         navigationController.viewControllers = [tabBarController]
@@ -69,27 +74,30 @@ class TabCoordinator: NSObject, Coordinator {
 
         navController.tabBarItem = UITabBarItem.init(title: nil,
                                                      image: page.pageIconValue(),
-                                                     tag: page.pageOrderNumber())
+                                                     selectedImage: page.pageSelectedIconValue())
 
         switch page {
         case .home:
-    
             let homeCoordinator = HomeCoordinator(navController)
+            homeCoordinator.finishDelegate = finishDelegate
             childCoordinators.append(homeCoordinator)
             homeCoordinator.start()
             
         case .cards:
             let cardsCoordinator = CardsCoordinator(navController)
+            cardsCoordinator.finishDelegate = finishDelegate
             childCoordinators.append(cardsCoordinator)
             cardsCoordinator.start()
             
         case .explore:
             let exploreCoordinator = ExploreCoordinator(navController)
+            exploreCoordinator.finishDelegate = finishDelegate
             childCoordinators.append(exploreCoordinator)
             exploreCoordinator.start()
 
         case .profile:
-            let profileCoordinator = ExploreCoordinator(navController)
+            let profileCoordinator = ProfileCoordinator(navController)
+            profileCoordinator.finishDelegate = finishDelegate
             childCoordinators.append(profileCoordinator)
             profileCoordinator.start()
 

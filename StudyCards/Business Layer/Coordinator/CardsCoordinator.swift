@@ -28,7 +28,7 @@ class CardsCoordinator: NSObject, Coordinator{
         navigationController.pushViewController(cardsVC, animated: false)
     }
     
-    func finish() {
-        navigationController.popViewController(animated: true)
-    }
+//    func finish() {
+//        navigationController.popViewController(animated: true)
+//    }
 }

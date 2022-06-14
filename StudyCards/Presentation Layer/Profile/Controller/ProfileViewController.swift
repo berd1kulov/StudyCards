@@ -59,8 +59,8 @@ extension ProfileViewController {
                 case .resetPassword: break
                 case .appLanguage: break
                 case .signOut:
-                    self.dismiss(animated: true)
-//                    self.didSendEventClosure?(.logout)
+//                    self.dismiss(animated: true)
+                    self.didSendEventClosure?(.logout)
                 case .none:
                     break
                 }

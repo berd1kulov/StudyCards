@@ -61,6 +61,19 @@ enum TabBarPage {
             return Asset.icProfileDeselected.image
         }
     }
+    
+    func pageSelectedIconValue() -> UIImage {
+        switch self {
+        case .home:
+            return Asset.icHomeSelected.image
+        case .cards:
+            return Asset.icCardsSelected.image
+        case .explore:
+            return Asset.icExploreSelected.image
+        case .profile:
+            return Asset.icProfileSelected.image
+        }
+    }
 
     func pageOrderNumber() -> Int {
         switch self {
