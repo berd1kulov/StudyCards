@@ -4,7 +4,6 @@
 //
 //  Created by Bakdaulet Berdikul on 05.06.2022.
 //
-
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
@@ -25,4 +24,3 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         appCoordinator?.start()
     }
 }
-

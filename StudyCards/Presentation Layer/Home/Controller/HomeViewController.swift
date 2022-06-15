@@ -74,13 +74,11 @@ class HomeViewController: BaseVC {
 
 extension HomeViewController: HomeNavBarViewDelegate {
     func didFirstLanguageTapped() {
-        let vc = LanguagesViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        coordinator?.openLanguages()
     }
     
     func didSecondLanguageTapped() {
-        let vc = LanguagesViewController()
-        self.navigationController?.pushViewController(vc, animated: true)
+        coordinator?.openLanguages()
     }
     
     func didSwapLanguageTapped() {

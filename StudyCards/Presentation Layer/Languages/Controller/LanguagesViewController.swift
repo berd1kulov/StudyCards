@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 
 class LanguagesViewController: BaseVC {
+    
+    weak var coordinator: LanguagesCoordinator?
 
     private var factory = LanguagesFactory()
     

@@ -6,7 +6,7 @@
 //
 import UIKit
 
-class HomeCoordinator: NSObject, Coordinator{
+class HomeCoordinator: NSObject, Coordinator, UINavigationControllerDelegate{
     var finishDelegate: CoordinatorFinishDelegate?
     var childCoordinators: [Coordinator] = [Coordinator]()
     var navigationController: UINavigationController
@@ -14,6 +14,7 @@ class HomeCoordinator: NSObject, Coordinator{
     var type: CoordinatorType { .tab }
     
     func start() {
+        navigationController.delegate = self
         pushHome()
     }
     
@@ -25,6 +26,29 @@ class HomeCoordinator: NSObject, Coordinator{
         let homeVC = HomeViewController()
         homeVC.coordinator = self
         navigationController.pushViewController(homeVC, animated: false)
+    }
+    
+    func openLanguages(){
+        let languagesCoordinator = LanguagesCoordinator(navigationController)
+        languagesCoordinator.finishDelegate = finishDelegate
+        childCoordinators.append(languagesCoordinator)
+        languagesCoordinator.start()
+    }
+    
+    func navigationController(_ navigationController: UINavigationController,
+                              didShow viewController: UIViewController,
+                              animated: Bool) {
+        guard let fromVC = navigationController
+                .transitionCoordinator?
+                .viewController(forKey: .from) else { return }
+        if navigationController.viewControllers.contains(fromVC) { return }
+        if let languagesVC = fromVC as? LanguagesViewController {
+            removeSVChildCoordinator(languagesVC.coordinator)
+        }
+    }
+    
+    func removeSVChildCoordinator(_ child: Coordinator?) {
+        childCoordinators.removeAll(where: { $0 === child })
     }
     
 }

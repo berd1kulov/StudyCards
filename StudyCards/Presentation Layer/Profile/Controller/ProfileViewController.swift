@@ -57,7 +57,10 @@ extension ProfileViewController {
                 switch cell.buttonType{
                 case .buyWords: break
                 case .resetPassword: break
-                case .appLanguage: break
+                case .appLanguage:
+                    let settingsURL = URL(string: UIApplication.openSettingsURLString)!
+                    UIApplication.shared.open(settingsURL, options: [:], completionHandler: nil)
+                        
                 case .signOut:
 //                    self.dismiss(animated: true)
                     self.didSendEventClosure?(.logout)
