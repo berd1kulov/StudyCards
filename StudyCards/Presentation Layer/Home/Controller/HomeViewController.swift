@@ -13,6 +13,14 @@ class HomeViewController: BaseVC {
     weak var coordinator: HomeCoordinator?
     
     private var factory = HomeFactory()
+    private var viewModel = HomeViewModel()
+    
+    private lazy var tableView = factory.tableView
+    
+    private lazy var tableDirector: HomeTVManager = {
+        let tableDirector = HomeTVManager(tableView: tableView, items: viewModel.wordsFields)
+        return tableDirector
+    }()
 
     private lazy var topNavBarView = factory.topNavBarView
     private lazy var actionButton = factory.actionButton
@@ -25,7 +33,11 @@ class HomeViewController: BaseVC {
         
         topNavBarView.delegate = self
         
+        viewModel.fetchAllDatas()
+        tableDirector.notifier = self
+        
         configureNavBar()
+        configureTableView()
         configureActionButton()
     }
     
@@ -41,6 +53,16 @@ class HomeViewController: BaseVC {
             $0.width.equalTo(view.snp.width)
             $0.centerX.equalTo(view.snp.centerX)
             $0.height.equalTo(46)
+        }
+    }
+    
+    private func configureTableView(){
+        view.addSubview(tableView)
+        tableView.snp.makeConstraints{
+            $0.top.equalTo(topNavBarView.snp.bottom)
+            $0.width.equalTo(view.snp.width)
+            $0.centerX.equalTo(view.snp.centerX)
+            $0.bottom.equalTo(view.snp.bottom)
         }
     }
     
@@ -72,7 +94,11 @@ class HomeViewController: BaseVC {
     }
 }
 
-extension HomeViewController: HomeNavBarViewDelegate {
+extension HomeViewController: HomeNavBarViewDelegate, HomeTVManagerNotifier {
+    func selectPlayItem(_ folder: WordFolder?) {
+        print(folder?.folder ?? "")
+    }
+    
     func didFirstLanguageTapped() {
         coordinator?.openLanguages()
     }

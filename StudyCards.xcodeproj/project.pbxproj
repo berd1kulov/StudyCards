@@ -52,6 +52,9 @@
 		C05F65DD28575F5300915847 /* CardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F65DC28575F5300915847 /* CardsCoordinator.swift */; };
 		C05F65DF28575F7000915847 /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F65DE28575F7000915847 /* ExploreCoordinator.swift */; };
 		C05F65E128575F8C00915847 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F65E028575F8C00915847 /* ProfileCoordinator.swift */; };
+		C08F3A91285A3E5800F5E18A /* HomeWordsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F3A90285A3E5800F5E18A /* HomeWordsCell.swift */; };
+		C08F3A95285A41DD00F5E18A /* WordFolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F3A94285A41DD00F5E18A /* WordFolder.swift */; };
+		C08F3A97285A451600F5E18A /* HomeTVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08F3A96285A451600F5E18A /* HomeTVManager.swift */; };
 		C0A80DA82859ADD9009534FA /* LanguagesCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A80DA72859ADD9009534FA /* LanguagesCoordinator.swift */; };
 		C0A80DAA2859BAD8009534FA /* Bundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A80DA92859BAD7009534FA /* Bundle.swift */; };
 		C0A80DAE2859DD4E009534FA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0A80DAD2859DD4E009534FA /* SceneDelegate.swift */; };
@@ -126,6 +129,11 @@
 		C05F65DC28575F5300915847 /* CardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCoordinator.swift; sourceTree = "<group>"; };
 		C05F65DE28575F7000915847 /* ExploreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCoordinator.swift; sourceTree = "<group>"; };
 		C05F65E028575F8C00915847 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		C08F3A8E285A38BD00F5E18A /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C08F3A8F285A38BD00F5E18A /* kk */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = kk; path = kk.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C08F3A90285A3E5800F5E18A /* HomeWordsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeWordsCell.swift; sourceTree = "<group>"; };
+		C08F3A94285A41DD00F5E18A /* WordFolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFolder.swift; sourceTree = "<group>"; };
+		C08F3A96285A451600F5E18A /* HomeTVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTVManager.swift; sourceTree = "<group>"; };
 		C0A80DA72859ADD9009534FA /* LanguagesCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguagesCoordinator.swift; sourceTree = "<group>"; };
 		C0A80DA92859BAD7009534FA /* Bundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bundle.swift; sourceTree = "<group>"; };
 		C0A80DAD2859DD4E009534FA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -289,6 +297,7 @@
 				C024A209284E3263008E7819 /* Enums.swift */,
 				C024A219284E3BCB008E7819 /* User.swift */,
 				C0C9D70228506B6600AB5D79 /* Language.swift */,
+				C08F3A94285A41DD00F5E18A /* WordFolder.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -347,6 +356,7 @@
 				C024A20F284E380D008E7819 /* TableDirector */,
 				C024A20D284E356F008E7819 /* ProfileTVManager.swift */,
 				C0C9D7062850722700AB5D79 /* LanguageTVManager.swift */,
+				C08F3A96285A451600F5E18A /* HomeTVManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -512,6 +522,7 @@
 			isa = PBXGroup;
 			children = (
 				C024A21F284F9289008E7819 /* HomeNavBarView.swift */,
+				C08F3A90285A3E5800F5E18A /* HomeWordsCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -637,6 +648,7 @@
 				en,
 				Base,
 				ru,
+				kk,
 			);
 			mainGroup = C00EF986284D0276009EA9B6;
 			productRefGroup = C00EF990284D0276009EA9B6 /* Products */;
@@ -724,6 +736,8 @@
 				C05F65DD28575F5300915847 /* CardsCoordinator.swift in Sources */,
 				C024A211284E382B008E7819 /* CellAction.swift in Sources */,
 				C024A21C284E3EFE008E7819 /* ProfileFactory.swift in Sources */,
+				C08F3A95285A41DD00F5E18A /* WordFolder.swift in Sources */,
+				C08F3A97285A451600F5E18A /* HomeTVManager.swift in Sources */,
 				C00EF9EF284DDCD1009EA9B6 /* DataModel.swift in Sources */,
 				C00EF993284D0276009EA9B6 /* AppDelegate.swift in Sources */,
 				C00EF9C6284D2571009EA9B6 /* ExploreViewController.swift in Sources */,
@@ -743,6 +757,7 @@
 				C0D17FB92851D67E00EDBAB2 /* TabCoordinator.swift in Sources */,
 				C024A206284E2BB8008E7819 /* ProfileImageCell.swift in Sources */,
 				C00EF9CE284D29CB009EA9B6 /* UIButton + Ext.swift in Sources */,
+				C08F3A91285A3E5800F5E18A /* HomeWordsCell.swift in Sources */,
 				C0A80DAE2859DD4E009534FA /* SceneDelegate.swift in Sources */,
 				C00EF9C0284D209C009EA9B6 /* BaseVC.swift in Sources */,
 				C024A216284E3889008E7819 /* ConfigurableCell.swift in Sources */,
@@ -779,6 +794,7 @@
 			children = (
 				C00EF99E284D0277009EA9B6 /* Base */,
 				C00EF9EC284DCA18009EA9B6 /* ru */,
+				C08F3A8E285A38BD00F5E18A /* kk */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -788,6 +804,7 @@
 			children = (
 				C00EF9E6284DC7C3009EA9B6 /* en */,
 				C00EF9ED284DCA19009EA9B6 /* ru */,
+				C08F3A8F285A38BD00F5E18A /* kk */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";

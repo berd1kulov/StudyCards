@@ -22,4 +22,13 @@ class HomeFactory {
         $0.layer.shadowOffset = CGSize(width: 0 , height: 2)
     }
     
+    let tableView = UITableView().then{
+        $0.isUserInteractionEnabled = true
+        $0.backgroundColor = .systemBackground
+        $0.separatorStyle = .none
+        $0.showsVerticalScrollIndicator = false
+        
+        $0.registerTVCellInCollection(HomeWordsCell.self)
+    }
+    
 }

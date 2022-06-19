@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  StudyCards
+
+  Created by Bakdaulet Berdikul on 06.06.2022.
+  
+*/
+
+//Authorization
+"email" = "Электронды почта";
+"password" = "Құпия сөз";
+"forgot_password" = "Құпия сөзді ұмыттыңыз ба?";
+"sign_in" = "Кіру";
+
+//Home
+"word" = "Сөз";
+"folder" = "Жиынтық";
+
+//Profile
+"buy_words" = "Сөз сатып алу";
+"reset_password" = "Құпия сөзді қалпына келтіру";
+"application_language" = "Бағдарлама тілі";
+"sign_out" = "Шығу";
+"profile" = "Жеке профиль";
