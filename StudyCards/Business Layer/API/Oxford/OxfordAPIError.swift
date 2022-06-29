@@ -8,15 +8,15 @@
 import Foundation
 
 enum OxfordAPIError: String, Error {
-    case badRequest = "Error 400: Error 400: Paramètres manquants dans la requête."
-    case forbidden = "Error 403: Requête non autorisée (potentiellement un problème au niveau de la clé d'API)."
+    case badRequest = "Error 400: Error 400: Missing parameters in the request."
+    case forbidden = "Error 403: Unauthorized request (potentially a problem at the API key level)."
     case notFound = "Error 404: Word not found."
-    case tooManyRequests = "Error 429: Trop de requêtes ont été effectuées dans un laps de temps. Veuillez réessayer ultérieurement."
-    case serverError = "Error 500: Erreur serveur."
-    case apiError = "Une Error est survenue."
-    case invalidURL = "Error: URL invalide."
-    case networkError = "Une Error est survenue, pas de connexion Internet."
-    case decodeError = "Une Error est survenue au décodage des données téléchargées."
-    case downloadError = "Une Error est survenue au téléchargement des données."
-    case unknown = "Error inconnue."
+    case tooManyRequests = "Error 429: Too many requests have been made in a short period of time. Please try again later."
+    case serverError = "Error 500: Server error."
+    case apiError = "An error has occurred."
+    case invalidURL = "Error: Invalid URL."
+    case networkError = "An Error has occurred, no Internet connection."
+    case decodeError = "An error occurred while decoding the downloaded data."
+    case downloadError = "An error occurred while downloading the data."
+    case unknown = "Unknown error."
 }

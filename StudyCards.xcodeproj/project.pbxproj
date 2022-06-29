@@ -49,6 +49,7 @@
 		C024A21C284E3EFE008E7819 /* ProfileFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024A21B284E3EFE008E7819 /* ProfileFactory.swift */; };
 		C024A21E284F86DD008E7819 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024A21D284F86DD008E7819 /* HomeFactory.swift */; };
 		C024A220284F9289008E7819 /* HomeNavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C024A21F284F9289008E7819 /* HomeNavBarView.swift */; };
+		C037417B28658EA8007D9437 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C037417A28658EA8007D9437 /* GoogleService-Info.plist */; };
 		C05F65DD28575F5300915847 /* CardsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F65DC28575F5300915847 /* CardsCoordinator.swift */; };
 		C05F65DF28575F7000915847 /* ExploreCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F65DE28575F7000915847 /* ExploreCoordinator.swift */; };
 		C05F65E128575F8C00915847 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C05F65E028575F8C00915847 /* ProfileCoordinator.swift */; };
@@ -126,6 +127,7 @@
 		C024A21B284E3EFE008E7819 /* ProfileFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFactory.swift; sourceTree = "<group>"; };
 		C024A21D284F86DD008E7819 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		C024A21F284F9289008E7819 /* HomeNavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeNavBarView.swift; sourceTree = "<group>"; };
+		C037417A28658EA8007D9437 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C05F65DC28575F5300915847 /* CardsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsCoordinator.swift; sourceTree = "<group>"; };
 		C05F65DE28575F7000915847 /* ExploreCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCoordinator.swift; sourceTree = "<group>"; };
 		C05F65E028575F8C00915847 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 		C00EF991284D0276009EA9B6 /* StudyCards */ = {
 			isa = PBXGroup;
 			children = (
+				C037417A28658EA8007D9437 /* GoogleService-Info.plist */,
 				C00EF9A0284D0277009EA9B6 /* Info.plist */,
 				C00EF9A8284D1E18009EA9B6 /* Application Layer */,
 				C00EF9AA284D1E37009EA9B6 /* Business Layer */,
@@ -667,6 +670,7 @@
 			files = (
 				C00EF99F284D0277009EA9B6 /* LaunchScreen.storyboard in Resources */,
 				C00EF9E5284DC7C3009EA9B6 /* Localizable.strings in Resources */,
+				C037417B28658EA8007D9437 /* GoogleService-Info.plist in Resources */,
 				C00EF99C284D0277009EA9B6 /* Assets.xcassets in Resources */,
 				C00EF9D7284DC463009EA9B6 /* swiftgen.yml in Resources */,
 			);
@@ -949,7 +953,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bbbakdaulet.StudyCards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abmco.StudyCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -978,7 +982,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.bbbakdaulet.StudyCards;
+				PRODUCT_BUNDLE_IDENTIFIER = com.abmco.StudyCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
